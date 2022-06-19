@@ -278,13 +278,13 @@ void Motor_Control(void)
         pitch_loc = IMU_Pitch * 255.0f / 180.0f;
         digitalWrite(MOTOR_DIRECTION_PIN_1,HIGH);
         digitalWrite(MOTOR_DIRECTION_PIN_2,LOW);
-        alalogWrite(MOTOR_CONTROL_PIN,(uint8_t)(pitch_loc));
+        analogWrite(MOTOR_CONTROL_PIN,(uint8_t)(pitch_loc));
     }
     else
     {
         pitch_loc = -1.0f * IMU_Pitch * 255.0f / 180.0f;
         digitalWrite(MOTOR_DIRECTION_PIN_1,LOW);
         digitalWrite(MOTOR_DIRECTION_PIN_2,HIGH);
-        alalogWrite(MOTOR_CONTROL_PIN,(uint8_t)(pitch_loc));
+        analogWrite(MOTOR_CONTROL_PIN,(uint8_t)(pitch_loc));
     }
 }
